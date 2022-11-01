@@ -1,0 +1,16 @@
+SRC_TCP_SERV=TCP_Serv.c
+EXE_TCP_SERV=TCP_Serv
+SRC_TCP_CLI=TCP_Cli.c
+EXE_TCP_CLI=TCP_Cli
+CFLAGS=
+
+all: server client
+
+server: ${SRC_TCP_SERV}
+	gcc ${CFLAGS} ${SRC_TCP_SERV} -o ${EXE_TCP_SERV}
+clear:
+	rm -f ${EXE_TCP_SERV} BBBB
+client: ${SRC_TCP_CLI}
+	gcc ${CFLAGS} ${SRC_TCP_CLI} -o ${EXE_TCP_CLI}
+clean:
+	rm -f ${EXE_TCP_CLI} AAAA

@@ -1,0 +1,16 @@
+SRC_UDP_SERV=UDP_Serv.c
+EXE_UDP_SERV=UDP_Serv
+SRC_UDP_CLI=UDP_Cli.c
+EXE_UDP_CLI=UDP_Cli
+CFLAGS=
+
+all: server client
+
+server: ${SRC_UDP_SERV}
+	gcc ${CFLAGS} ${SRC_UDP_SERV} -o ${EXE_UDP_SERV}
+clean:
+	rm -f ${EXE_UDP_SERV} BBBB
+client: ${SRC_UDP_CLI}
+	gcc ${CFLAGS} ${SRC_UDP_CLI} -o ${EXE_UDP_CLI}
+clean:
+	rm -f ${EXE_UDP_CLI} AAAA
